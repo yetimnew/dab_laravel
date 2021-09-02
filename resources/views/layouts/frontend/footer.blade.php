@@ -17,7 +17,7 @@
 
                         <!--
                                 Custom Logo
-                                <img src="{{ asset('images/logo.svg') }}" alt="NEXGEN">
+                                <img src="{{ asset('frontend/images/logo.svg') }}" alt="NEXGEN">
                             -->
                     </a>
                     <p>A Functional HTML Template<br>for Corporate & Business.</p>
@@ -274,28 +274,30 @@
 <!-- ==============================================
     Google reCAPTCHA // Put your site key here
     =============================================== -->
-<script data-cfasync="false" src="{{ asset('cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js') }}">
+<script data-cfasync="false"
+    src="{{ asset('frontend/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js') }}">
 </script>
 {{-- <script src="../www.google.com/recaptcha/api9516.js?render=6Lf-NwEVAAAAAPo_wwOYxFW18D9_EKvwxJxeyUx7"></script> --}}
 
 <!-- ==============================================
     Vendor Scripts
     =============================================== -->
-<script src="{{asset('js/app.js')}}"></script>
-<script src="{{asset('js/vendor/jquery.min.js')}}"></script>
-<script src="{{asset('js/vendor/jquery.easing.min.js')}}"></script>
-<script src="{{asset('js/vendor/jquery.inview.min.js')}}"></script>
-<script src="{{asset('js/vendor/popper.min.js')}}"></script>
-<script src="{{asset('js/vendor/bootstrap.min.js')}}"></script>
-<script src="{{asset('js/vendor/ponyfill.min.js')}}"></script>
-<script src="{{asset('js/vendor/slider.min.js')}}"></script>
-<script src="{{asset('js/vendor/animation.min.js')}}"></script>
-<script src="{{asset('js/vendor/progress-radial.min.js')}}"></script>
-<script src="{{asset('js/vendor/bricklayer.min.js')}}"></script>
-<script src="{{asset('js/vendor/gallery.min.js')}}"></script>
-<script src="{{asset('js/vendor/shuffle.min.js')}}"></script>
-<script src="{{asset('js/vendor/cookie-notice.min.js')}}"></script>
-<script src="{{asset('js/vendor/particles.min.js')}}"></script>
-<script src="{{asset('js/main.js')}}"></script>
+{{-- <script src="{{asset('frontend/js/app.js')}}"></script> --}}
+<script src="{{asset('frontend/js/vendor/jquery.min.js')}}"></script>
+{{-- <script src="{{asset('frontend/js/vendor/jquery.easing.min.js')}}"></script> --}}
+{{-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script> --}}
+<script src="{{asset('frontend/js/vendor/jquery.inview.min.js')}}"></script>
+<script src="{{asset('frontend/js/vendor/popper.min.js')}}"></script>
+<script src="{{asset('frontend/js/vendor/bootstrap.min.js')}}"></script>
+<script src="{{asset('frontend/js/vendor/ponyfill.min.js')}}"></script>
+<script src="{{asset('frontend/js/vendor/slider.min.js')}}"></script>
+<script src="{{asset('frontend/js/vendor/animation.min.js')}}"></script>
+<script src="{{asset('frontend/js/vendor/progress-radial.min.js')}}"></script>
+<script src="{{asset('frontend/js/vendor/bricklayer.min.js')}}"></script>
+<script src="{{asset('frontend/js/vendor/gallery.min.js')}}"></script>
+<script src="{{asset('frontend/js/vendor/shuffle.min.js')}}"></script>
+<script src="{{asset('frontend/js/vendor/cookie-notice.min.js')}}"></script>
+<script src="{{asset('frontend/js/vendor/particles.min.js')}}"></script>
+<script src="{{asset('frontend/js/main.js')}}"></script>
 </body>
 </>

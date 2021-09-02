@@ -18,31 +18,31 @@
     <!-- ==============================================
     Favicons
     =============================================== -->
-    <link rel="shortcut icon" href="{{ asset('images/favicon.ico')}}">
-    <link rel="apple-touch-icon" href="{{ asset('images/apple-touch-icon.png')}}">
-    <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('/images/apple-touch-icon-72x72.png')}}">
-    <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('images/apple-touch-icon-114x114.png')}}">
+    <link rel="shortcut icon" href="{{ asset('frontend/images/favicon.ico')}}">
+    <link rel="apple-touch-icon" href="{{ asset('frontend/images/apple-touch-icon.png')}}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('frontend/images/apple-touch-icon-72x72.png')}}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('frontend/images/apple-touch-icon-114x114.png')}}">
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('frontend/js/app.js') }}" defer></script>
 
     <!-- ==============================================
         Vendor Stylesheet
         =============================================== -->
-    {{-- <link rel="stylesheet" href="{{ asset('/css/vendor/bootstrap.min.css')}}"> --}}
-    <link rel="stylesheet" href="{{ asset('/css/app.css')}}">
-    <link rel="stylesheet" href="{{ asset('/css/vendor/slider.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('/css/main.css')}}">
-    <link rel="stylesheet" href="{{ asset('/css/vendor/icons.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('/css/vendor/icons-fa.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('/css/vendor/animation.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('/css/vendor/gallery.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('/css/vendor/cookie-notice.min.css')}}">
+    {{-- <link rel="stylesheet" href="{{ asset('frontend/css/vendor/bootstrap.min.css')}}"> --}}
+    <link rel="stylesheet" href="{{ asset('frontend/css/app.css')}}">
+    <link rel="stylesheet" href="{{ asset('frontend/css/vendor/slider.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('frontend/css/main.css')}}">
+    <link rel="stylesheet" href="{{ asset('frontend/css/vendor/icons.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('frontend/css/vendor/icons-fa.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('frontend/css/vendor/animation.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('frontend/css/vendor/gallery.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('frontend/css/vendor/cookie-notice.min.css')}}">
 
     <!-- ==============================================
         Custom Stylesheet
         =============================================== -->
-    <link rel="stylesheet" href="{{ asset('css/default.css')}}">
+    <link rel="stylesheet" href="{{ asset('frontend/css/default.css')}}">
 
     <!-- ==============================================
         Theme Color
@@ -65,7 +65,7 @@
             --section-7-bg-color: #ffffff;
 
             --footer-bg-color: #080d10;
-            --footer-bg-image: url('{{ asset('images/bg-7.jpg') }}');
+            --footer-bg-image: url('{{ asset('frontend/images/bg-7.jpg') }}');
 
         }
     </style>
@@ -141,7 +141,7 @@
                         </span>
                         <span class="last">GEN</span> --}}
 
-                        <img src="{{ asset('/images/logo-1.png')}}" alt="NEXGEN">
+                        <img src="{{ asset('frontend/images/logo-1.png')}}" alt="NEXGEN">
 
                 </a>
 
@@ -150,35 +150,12 @@
 
                 <!-- Navbar Items -->
                 <ul class="navbar-nav items">
+                    @foreach ($menus as $menu)
                     <li class="nav-item dropdown">
-                        <a href="#" class="nav-link">HOME </a>
+                        <a href="#" class="nav-link">{{$menu->title}} </a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a href="#" class="nav-link">SERVICES </a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a href="#" class="nav-link">PORTOFOLIO </a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a href="#" class="nav-link">CAREER </a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a href="#" class="nav-link">NEWS AND EVENTS <i class="icon-arrow-down"></i></a>
-                        <ul class="dropdown-menu">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link" href="#">About <i class="icon-arrow-right"></i></a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item"><a href="page-about-1.html" class="nav-link">About
-                                            <span>1</span></a></li>
-                                    <li class="nav-item"><a href="page-about-2.html" class="nav-link">About
-                                            <span>2</span></a></li>
-                                </ul>
-                            </li>
+                    @endforeach
 
-                            <li class="nav-item"><a href="page-search-1.html" class="nav-link">Search Results</a></li>
-                            <li class="nav-item"><a href="page-404-1.html" class="nav-link">404 Page</a></li>
-                        </ul>
-                    </li>
 
                 </ul>
 

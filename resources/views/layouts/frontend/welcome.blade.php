@@ -1,4 +1,4 @@
-@extends('layouts.frontend.app')
+@include('layouts.frontend.header');
 @section('content')
 <!-- Hero -->
 <section id="slider" class="hero p-0 odd">
@@ -9,7 +9,7 @@
             <div class="swiper-slide slide-center">
 
                 <!-- Media -->
-                <img src="{{ asset('/images/bg-1.jpg')}}" alt="Full Image" class="full-image" data-mask="40">
+                <img src="{{ asset('frontend/images/bg-1.jpg')}}" alt="Full Image" class="full-image" data-mask="40">
 
                 <div class="slide-content row">
                     <div class="col-12 d-flex justify-content-start inner">
@@ -39,7 +39,7 @@
             <div class="swiper-slide slide-center">
 
                 <!-- Media -->
-                <img src="{{ asset('images/bg-2.jpg') }}" alt="Full Image" class="full-image" data-mask="40">
+                <img src="{{ asset('frontend/images/bg-2.jpg') }}" alt="Full Image" class="full-image" data-mask="40">
 
                 <div class="slide-content row">
                     <div class="col-12 d-flex justify-content-start justify-content-md-center inner">
@@ -69,7 +69,7 @@
             <!-- Item 3 -->
             <div class="swiper-slide slide-center">
                 <!-- Media -->
-                <img src="{{ asset('images/bg-3.jpg')}}" alt="Full Image" class="full-image" data-mask="40">
+                <img src="{{ asset('frontend/images/bg-3.jpg')}}" alt="Full Image" class="full-image" data-mask="40">
 
                 <div class="slide-content row">
                     <div class="col-12 d-flex justify-content-start justify-content-md-end inner">
@@ -97,7 +97,7 @@
             <!-- Item 3 -->
             <div class="swiper-slide slide-center">
                 <!-- Media -->
-                <img src="{{ asset('images/bg-3.jpg')}}" alt="Full Image" class="full-image" data-mask="40">
+                <img src="{{ asset('frontend/images/bg-3.jpg')}}" alt="Full Image" class="full-image" data-mask="40">
 
                 <div class="slide-content row">
                     <div class="col-12 d-flex justify-content-start justify-content-md-end inner">
@@ -141,11 +141,11 @@
         </div>
         <div class="row text-center">
             <div class="col-12 gallery">
-                <a href="https://vimeo.com/222990241"
+                <a href="https:/vimeo.com/222990241"
                     class="square-image d-flex justify-content-center align-items-center">
                     <i class="icon bigger fas fa-play clone"></i>
                     <i class="icon bigger fas fa-play"></i>
-                    <img src="{{ asset('images/video-1.jpg') }}" class="fit-image" alt="Introduction Video">
+                    <img src="{{ asset('frontend/images/video-1.jpg') }}" class="fit-image" alt="Introduction Video">
                 </a>
             </div>
         </div>
@@ -155,7 +155,7 @@
 <!-- Fun Facts -->
 <section id="funfacts" class="section-2 odd counter funfacts">
     <video class="full-image to-bottom grayscale" data-mask="70" playsinline autoplay muted loop>
-        <source src="{{ asset('videos/city.mp4')}}" type="video/mp4" />
+        <source src="{{ asset('frontend/videos/city.mp4')}}" type="video/mp4" />
     </video>
     <div class="container">
         <div class="row mb-md-5 text-center">
@@ -277,7 +277,7 @@
                     <div class="col-12 col-md-6 p-0">
                         <div class="row item">
                             <div class="col-4 p-0 pr-3 align-self-center">
-                                <img src="{{ asset('images/team-1.jpg') }}" alt="Person" class="person">
+                                <img src="{{ asset('frontend/images/team-1.jpg') }}" alt="Person" class="person">
                             </div>
                             <div class="col-8 align-self-center text-left">
                                 <h4>David Cooper</h4>
@@ -297,7 +297,7 @@
                         </div>
                         <div class="row item">
                             <div class="col-4 p-0 pr-3 align-self-center">
-                                <img src="{{ asset('images/team-2.jpg')}}" alt="Person" class="person">
+                                <img src="{{ asset('frontend/images/team-2.jpg')}}" alt="Person" class="person">
                             </div>
                             <div class="col-8 align-self-center text-left">
                                 <h4>Emma Lopez</h4>
@@ -319,7 +319,7 @@
                     <div class="col-12 col-md-6 p-0">
                         <div class="row item">
                             <div class="col-4 p-0 pr-3 align-self-center">
-                                <img src="{{ asset('images/team-3.jpg')}}" alt="Person" class="person">
+                                <img src="{{ asset('frontend/images/team-3.jpg')}}" alt="Person" class="person">
                             </div>
                             <div class="col-8 align-self-center text-left">
                                 <h4>Oliver Jones</h4>
@@ -339,7 +339,7 @@
                         </div>
                         <div class="row item">
                             <div class="col-4 p-0 pr-3 align-self-center">
-                                <img src="{{ asset('images/team-4.jpg')}}" alt="Person" class="person">
+                                <img src="{{ asset('frontend/images/team-4.jpg')}}" alt="Person" class="person">
                             </div>
                             <div class="col-8 align-self-center text-left">
                                 <h4>T. Johnson</h4>
@@ -397,7 +397,7 @@
                     <div class="swiper-slide slide-center item">
                         <div class="row card p-0 text-center">
                             <div class="image-over">
-                                <img src="{{ asset('images/news-1.jpg')}}" alt="Lorem ipsum">
+                                <img src="{{ asset('frontend/images/news-1.jpg')}}" alt="Lorem ipsum">
                             </div>
                             <div class="card-footer d-lg-flex align-items-center justify-content-center">
                                 <a href="#" class="d-lg-flex align-items-center"><i class="icon-user"></i>Andrea
@@ -418,7 +418,7 @@
                     <div class="swiper-slide slide-center item">
                         <div class="row card p-0 text-center">
                             <div class="image-over">
-                                <img src="{{ asset('images/news-2.jpg') }}" alt="Lorem ipsum">
+                                <img src="{{ asset('frontend/images/news-2.jpg') }}" alt="Lorem ipsum">
                             </div>
                             <div class="card-footer d-lg-flex align-items-center justify-content-center">
                                 <a href="#" class="d-lg-flex align-items-center"><i class="icon-user"></i>John
@@ -439,7 +439,7 @@
                     <div class="swiper-slide slide-center item">
                         <div class="row card p-0 text-center">
                             <div class="image-over">
-                                <img src="{{ asset('images/news-3.jpg') }}" alt="Lorem ipsum">
+                                <img src="{{ asset('frontend/images/news-3.jpg') }}" alt="Lorem ipsum">
                             </div>
                             <div class="card-footer d-lg-flex align-items-center justify-content-center">
                                 <a href="#" class="d-lg-flex align-items-center"><i class="icon-user"></i>Andrea
@@ -460,7 +460,7 @@
                     <div class="swiper-slide slide-center item">
                         <div class="row card p-0 text-center">
                             <div class="image-over">
-                                <img src="{{ asset('images/news-4.jpg') }}" alt="Lorem ipsum">
+                                <img src="{{ asset('frontend/images/news-4.jpg') }}" alt="Lorem ipsum">
                             </div>
                             <div class="card-footer d-lg-flex align-items-center justify-content-center">
                                 <a href="#" class="d-lg-flex align-items-center"><i class="icon-user"></i>John
@@ -481,7 +481,7 @@
                     <div class="swiper-slide slide-center item">
                         <div class="row card p-0 text-center">
                             <div class="image-over">
-                                <img src="{{ asset('images/news-5.jpg') }}" alt="Lorem ipsum">
+                                <img src="{{ asset('frontend/images/news-5.jpg') }}" alt="Lorem ipsum">
                             </div>
                             <div class="card-footer d-lg-flex align-items-center justify-content-center">
                                 <a href="#" class="d-lg-flex align-items-center"><i class="icon-user"></i>David
@@ -502,7 +502,7 @@
                     <div class="swiper-slide slide-center item">
                         <div class="row card p-0 text-center">
                             <div class="image-over">
-                                <img src="{{ asset('images/news-1.jpg') }}" alt="Lorem ipsum">
+                                <img src="{{ asset('frontend/images/news-1.jpg') }}" alt="Lorem ipsum">
                             </div>
                             <div class="card-footer d-lg-flex align-items-center justify-content-center">
                                 <a href="#" class="d-lg-flex align-items-center"><i class="icon-user"></i>Andrea
@@ -523,7 +523,7 @@
                     <div class="swiper-slide slide-center item">
                         <div class="row card p-0 text-center">
                             <div class="image-over">
-                                <img src="{{ asset('images/news-2.jpg') }}" alt="Lorem ipsum">
+                                <img src="{{ asset('frontend/images/news-2.jpg') }}" alt="Lorem ipsum">
                             </div>
                             <div class="card-footer d-lg-flex align-items-center justify-content-center">
                                 <a href="#" class="d-lg-flex align-items-center"><i class="icon-user"></i>John
@@ -544,7 +544,7 @@
                     <div class="swiper-slide slide-center item">
                         <div class="row card p-0 text-center">
                             <div class="image-over">
-                                <img src="{{ asset('images/news-3.jpg') }}" alt="Lorem ipsum">
+                                <img src="{{ asset('frontend/images/news-3.jpg') }}" alt="Lorem ipsum">
                             </div>
                             <div class="card-footer d-lg-flex align-items-center justify-content-center">
                                 <a href="#" class="d-lg-flex align-items-center"><i class="icon-user"></i>Andrea
@@ -565,7 +565,7 @@
                     <div class="swiper-slide slide-center item">
                         <div class="row card p-0 text-center">
                             <div class="image-over">
-                                <img src="{{ asset('images/news-4.jpg') }}" alt="Lorem ipsum">
+                                <img src="{{ asset('frontend/images/news-4.jpg') }}" alt="Lorem ipsum">
                             </div>
                             <div class="card-footer d-lg-flex align-items-center justify-content-center">
                                 <a href="#" class="d-lg-flex align-items-center"><i class="icon-user"></i>John
@@ -586,7 +586,7 @@
                     <div class="swiper-slide slide-center item">
                         <div class="row card p-0 text-center">
                             <div class="image-over">
-                                <img src="{{ asset('images/news-5.jpg') }}" alt="Lorem ipsum">
+                                <img src="{{ asset('frontend/images/news-5.jpg') }}" alt="Lorem ipsum">
                             </div>
                             <div class="card-footer d-lg-flex align-items-center justify-content-center">
                                 <a href="#" class="d-lg-flex align-items-center"><i class="icon-user"></i>David
@@ -620,7 +620,7 @@
                 <p>Follow closely and receive content about our company and the news of the current market.</p>
             </div>
             <div class="col-12 col-md-6">
-                <form action="https://nexgen-html.codings.dev/php/form.php" id="nexgen-subscribe"
+                <form action="https:/nexgen-html.codings.dev/php/form.php" id="nexgen-subscribe"
                     class="row m-auto items">
                     <input type="hidden" name="section" value="nexgen_subscribe">
 
@@ -659,7 +659,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12 p-0">
-                        <form action="https://nexgen-html.codings.dev/php/form.php" id="nexgen-simple-form"
+                        <form action="https:/nexgen-html.codings.dev/php/form.php" id="nexgen-simple-form"
                             class="nexgen-simple-form">
                             <input type="hidden" name="section" value="nexgen_form">
 
@@ -743,3 +743,4 @@
 </section>
 
 @endsection
+@include('layouts.frontend.footer');
