@@ -282,11 +282,11 @@
     Vendor Scripts
     =============================================== -->
 <script src="{{asset('js/app.js')}}"></script>
-{{-- <script src="{{asset('js/vendor/jquery.min.js')}}"></script> --}}
+<script src="{{asset('js/vendor/jquery.min.js')}}"></script>
 <script src="{{asset('js/vendor/jquery.easing.min.js')}}"></script>
 <script src="{{asset('js/vendor/jquery.inview.min.js')}}"></script>
-{{-- <script src="{{asset('js/vendor/popper.min.js')}}"></script>
-<script src="{{asset('js/vendor/bootstrap.min.js')}}"></script> --}}
+<script src="{{asset('js/vendor/popper.min.js')}}"></script>
+<script src="{{asset('js/vendor/bootstrap.min.js')}}"></script>
 <script src="{{asset('js/vendor/ponyfill.min.js')}}"></script>
 <script src="{{asset('js/vendor/slider.min.js')}}"></script>
 <script src="{{asset('js/vendor/animation.min.js')}}"></script>
