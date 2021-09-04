@@ -32,6 +32,12 @@ class MenueController extends Controller
         return view('layouts.backend.menu.create')->with('menu',$menu);
 
     }
+    public function show()
+    {
+        // $menu = New Menue;
+        // return view('layouts.backend.menu.create')->with('menu',$menu);
+
+    }
 
     public function store(Request $request)
     {
@@ -51,24 +57,31 @@ class MenueController extends Controller
         return redirect()->route('menu.index');
     }
 
-    public function show($id)
-    {
-        //
-    }
 
-
-    public function edit($id)
+    public function edit(Menue $menu)
     {
-        //
+        return view('layouts.backend.menu.edit')->with('menu',$menu);
     }
 
     public function update(Request $request, $id)
     {
-        //
+           $this->validate($request, [
+            'title' =>  'required|unique:menues,title,' . $id,
+            'link' =>  'required'
+        ]);
+
+        $menu =  Menue::findOrFail($id);
+        $menu->title = $request->title;
+        $menu->slug = Str::slug($request->title);
+        $menu->link = $request->link;
+        $menu->status = $request->status;
+        $menu->save();
+        Session::flash('success', 'Menu updated successfully');
+        return redirect()->route('menu.index');
     }
 
     public function destroy($id)
     {
-        //
+       dd($id);
     }
 }

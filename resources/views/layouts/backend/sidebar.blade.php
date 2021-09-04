@@ -34,9 +34,9 @@
         </div>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="forms.html">
+        <a class="nav-link" href="{{route('menu.index')}}">
             <i class="fab fa-fw fa-wpforms"></i>
-            <span>Forms</span>
+            <span>Menu</span>
         </a>
     </li>
     <li class="nav-item">

@@ -35,7 +35,8 @@
                             <th class="m-1 b-1">Slug</th>
                             <th class="m-1 b-1">Link</th>
                             <th class="m-1 b-1">status</th>
-                            <th class="m-1 b-1" width="3%">details</th>
+                            <th class="m-1 b-1" width="3%">Edit</th>
+                            <th class="m-1 b-1" width="3%">Delete</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -47,8 +48,11 @@
                             <td class='p-1'>{{$menu->slug}}</td>
                             <td class='p-1'>{{$menu->link}}</td>
                             <td class='p-1'>{{$menu->status}}</td>
-                            <td class='p-1 text-center' data-toggle="tooltip" data-placement="top" title="details">
-                                <a href="{{route('menu.show', $menu)}}"><i class="fas fa-edit"></i></a>
+                            <td class='p-1 text-center' data-toggle="tooltip" data-placement="top" title="Edit">
+                                <a href="{{route('menu.edit', $menu)}}"><i class="fas fa-edit"></i></a>
+                            </td>
+                            <td class='p-1 text-center' data-toggle="tooltip" data-placement="top" title="Delete">
+                                <a href="{{route('menu.destroy', $menu)}}"><i class="fas fa-trash danger"></i></a>
                             </td>
 
                         </tr>

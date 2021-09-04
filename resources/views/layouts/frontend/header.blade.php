@@ -155,10 +155,7 @@
                         <a href="#" class="nav-link">{{$menu->title}} </a>
                     </li>
                     @endforeach
-
-
                 </ul>
-
                 <!-- Navbar Icons -->
                 <ul class="navbar-nav icons">
                     <li class="nav-item">

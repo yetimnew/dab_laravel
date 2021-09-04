@@ -1,11 +1,10 @@
 <?php
 
+use App\Http\Controllers\Admin\FrontEndController;
 use App\Http\Controllers\Admin\MenueController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('layouts.frontend.welcome');
-});
+Route::get('/', [FrontEndController::class, 'index']);
 
 
 Route::middleware(['auth'])->group(function () {

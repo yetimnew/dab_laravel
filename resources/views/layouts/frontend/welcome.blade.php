@@ -1,4 +1,4 @@
-@include('layouts.frontend.header');
+@extends('layouts.frontend.app')
 @section('content')
 <!-- Hero -->
 <section id="slider" class="hero p-0 odd">
@@ -743,4 +743,3 @@
 </section>
 
 @endsection
-@include('layouts.frontend.footer');
