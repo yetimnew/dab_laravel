@@ -26,6 +26,9 @@
 <script src="{{ asset('backend/js/ruang-admin.min.js')}}"></script>
 <script src="{{ asset('backend/js/demo/chart-area-demo.js')}}"></script>
 <script src="{{ asset('backend/js/jquery.dataTables.min.js')}}"></script>
+<script src="{{ asset('js/ckeditor.js')}}"></script>
+{{-- <script src="https://cdn.ckeditor.com/ckeditor5/29.2.0/classic/ckeditor.js"></script> --}}
+@include('sweet::alert')
 @yield('scripts')
 </body>
 

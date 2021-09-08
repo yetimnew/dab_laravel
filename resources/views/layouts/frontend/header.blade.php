@@ -94,8 +94,8 @@
                 <!-- Navbar Items [left] -->
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="#" class="nav-link pl-0"><i class="fas fa-clock mr-2"></i>Open Hours: Mon - Sat - 9:00
-                            - 18:00</a>
+                        {{-- <a href="#" class="nav-link pl-0"><i class="fas fa-clock mr-2"></i>Open Hours: Mon - Sat - 9:00
+                            - 18:00</a> --}}
                     </li>
                 </ul>
 
@@ -109,7 +109,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link"><i class="fas fa-envelope mr-2"></i><span class="__cf_email__"
-                                data-cfemail="4d25282121220d28352c203d2128632e2220">[email&#160;protected]</span></a>
+                                data-cfemail="4d252821203d2128632e2220">[email&#160;protected]</span></a>
                     </li>
                 </ul>
 
@@ -141,7 +141,7 @@
                         </span>
                         <span class="last">GEN</span> --}}
 
-                        <img src="{{ asset('frontend/images/logo-1.png')}}" alt="NEXGEN">
+                        <img src="{{ asset('images/basic/logo-1024x764.png')}}" alt="DAB DRT Logo">
 
                 </a>
 
@@ -156,19 +156,7 @@
                     </li>
                     @endforeach
                 </ul>
-                <!-- Navbar Icons -->
-                <ul class="navbar-nav icons">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link" data-toggle="modal" data-target="#search">
-                            <i class="icon-magnifier"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link" data-toggle="modal" data-target="#sign">
-                            <i class="icon-user"></i>
-                        </a>
-                    </li>
-                </ul>
+
 
                 <!-- Navbar Toggle -->
                 <ul class="navbar-nav toggle">
@@ -180,11 +168,7 @@
                 </ul>
 
                 <!-- Navbar Action -->
-                <ul class="navbar-nav action">
-                    <li class="nav-item ml-3">
-                        <a href="#contact" class="smooth-anchor btn ml-lg-auto primary-button">CONTACT US</a>
-                    </li>
-                </ul>
+
             </div>
         </nav>
 

@@ -7,6 +7,7 @@ use App\Models\Admin\Menue;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Str;
+use SweetAlert;
 
 class MenueController extends Controller
 {
@@ -53,7 +54,8 @@ class MenueController extends Controller
         $menu->status = 0;
         $menu->save();
 
-        Session::flash('success', 'Menu registered successfully');
+        // Session::flash('success', 'Menu registered successfully');
+        SweetAlert::message('Menu registered successfully');
         return redirect()->route('menu.index');
     }
 
@@ -76,7 +78,8 @@ class MenueController extends Controller
         $menu->link = $request->link;
         $menu->status = $request->status;
         $menu->save();
-        Session::flash('success', 'Menu updated successfully');
+        // Session::flash('success', 'Menu updated successfully');
+        SweetAlert::message('Menu updated successfully!');
         return redirect()->route('menu.index');
     }
 

@@ -13,12 +13,12 @@
     <div class="card text-left col-md-12">
         <div class="card-header">
             <div class="d-flex align-items-center">
-                <h2>All menus </h2>
+                <h2>All projects </h2>
                 {{-- @can('customer create') --}}
 
                 <div class="ml-auto">
-                    <a href="{{route('menu.create')}}" class="btn btn-outline-primary btn-sm"><i
-                            class="fas fa-plus mr-1"></i>Add Menu</a>
+                    <a href="{{route('project.create')}}" class="btn btn-outline-primary btn-sm"><i
+                            class="fas fa-plus mr-1"></i>Add project</a>
 
                 </div>
                 {{-- @endcan --}}
@@ -27,10 +27,11 @@
 
         <div class="card-body">
             <div class="table-responsive text-nowrap">
-                <table class="table-sm table table-bordered table-sm table-striped" id="menus">
+                <table class="table-sm table table-bordered table-sm table-striped" id="projects">
                     <thead>
                         <tr>
                             <th class="m-1 b-1" width="3%">No</th>
+                            <th class="m-1 b-1">Avatar</th>
                             <th class="m-1 b-1">Title</th>
                             <th class="m-1 b-1">Slug</th>
                             <th class="m-1 b-1">Link</th>
@@ -40,16 +41,17 @@
                         </tr>
                     </thead>
                     <tbody>
-
-                        @forelse ($menus as $menu)
+                        @forelse ($projects as $project)
                         <tr>
                             <td class='p-1'>{{$loop->index+1}}</td>
-                            <td class='p-1'>{{$menu->title}}</td>
-                            <td class='p-1'>{{$menu->slug}}</td>
-                            <td class='p-1'>{{$menu->link}}</td>
-                            <td class='p-1'>{{$menu->status}}</td>
+                            <td class='p-1'><img src="/images/thumbnail/{{ $project->image }}" alt=""
+                                    class="rounded-circle" width="40" height="40"></td>
+                            <td class='p-1'>{{$project->title}}</td>
+                            <td class='p-1'>{{$project->slug}}</td>
+                            <td class='p-1'>{{$project->link}}</td>
+                            <td class='p-1'>{{$project->status}}</td>
                             <td class='p-1 text-center' data-toggle="tooltip" data-placement="top" title="Edit">
-                                <a href="{{route('menu.edit', $menu)}}"><i class="fas fa-edit"></i></a>
+                                <a href="{{route('project.edit', $project)}}"><i class="fas fa-edit"></i></a>
                             </td>
 
                             <td class='p-1 text-center' data-toggle="tooltip" data-placement="top" title="delete">
@@ -80,7 +82,7 @@
 <script>
     $(document).ready( function () {
 
-        $('#menus').DataTable();
+        $('#projects').DataTable();
 
         $('#delete_meue').click(function (e) {
 

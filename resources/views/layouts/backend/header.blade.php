@@ -185,7 +185,8 @@
                                             <div class="progress" style="height: 12px;">
                                                 <div class="progress-bar bg-danger" role="progressbar"
                                                     style="width: 75%" aria-valuenow="75" aria-valuemin="0"
-                                                    aria-valuemax="100"></div>
+                                                    aria-valuemax="100">
+                                                </div>
                                             </div>
                                         </div>
                                     </a>
@@ -198,7 +199,8 @@
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <img class="img-profile rounded-circle" src="{{asset('backend/img/boy.png')}}"
                                         style="max-width: 60px">
-                                    <span class="ml-2 d-none d-lg-inline text-white small">Maman Ketoprak</span>
+                                    <span
+                                        class="ml-2 d-none d-lg-inline text-white small">{{auth()->user()->name}}</span>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                     aria-labelledby="userDropdown">

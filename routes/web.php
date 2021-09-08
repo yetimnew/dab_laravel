@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\FrontEndController;
 use App\Http\Controllers\Admin\MenueController;
+use App\Http\Controllers\Admin\ProjectController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [FrontEndController::class, 'index']);
@@ -12,6 +13,7 @@ Route::middleware(['auth'])->group(function () {
         return view('layouts.backend.home');
     });
     Route::resource('menu', MenueController::class);
+    Route::resource('project', ProjectController::class);
 });
 Auth::routes();
 
