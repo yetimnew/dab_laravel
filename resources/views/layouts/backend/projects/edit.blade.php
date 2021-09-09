@@ -105,6 +105,9 @@
                     <div class="form-group  required">
                         <label class="control-label" for="category_id">Catagory</label>
                         <div class="input-group">
+                            @php
+                            $category_id = [];
+                            @endphp
                             <select name="category_id" id="category_id"
                                 class="form-control {{ $errors->has('category_id') ? ' is-invalid' : '' }}"
                                 onfocusout="validatecategory_id()">
@@ -178,11 +181,11 @@
                                 class="form-control {{ $errors->has('status') ? ' is-invalid' : '' }}"
                                 onfocusout="validatestatus()">
                                 @if ($project->status == 1)
-                                <option class="dropup" value="1" selected>Active </option>
-                                <option class="dropup" value="0">InActive</option>
+                                <option class="dropup" value="1" selected>Publihsed </option>
+                                <option class="dropup" value="0">Not Published</option>
                                 @else
-                                <option class="dropup" value="0" selected>InActive</option>
-                                <option class="dropup" value="1">Active</option>
+                                <option class="dropup" value="0" selected>Not Published</option>
+                                <option class="dropup" value="1">Publihsed</option>
                                 @endif
 
                             </select>

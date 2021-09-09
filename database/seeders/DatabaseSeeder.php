@@ -21,9 +21,14 @@ class DatabaseSeeder extends Seeder
             'password' =>bcrypt('password'),
         ]);
         DB::table('categories')->insert([
-            'title' =>'Category One',
-            'slug' => Str::slug('Category One')
+            'title' =>'Category Tow',
+            'slug' => Str::slug('Category Tow')
         ]);
+        DB::table('categories')->insert([
+            'title' =>'Category Three',
+            'slug' => Str::slug('Category Three')
+        ]);
+
         DB::table('customers')->insert([
             'name' =>'Customer One',
             'slug' => Str::slug('Customer One')
@@ -31,6 +36,14 @@ class DatabaseSeeder extends Seeder
         DB::table('tags')->insert([
             'name' =>'Tag One',
             'slug' => Str::slug('Tag One')
+        ]);
+        DB::table('tags')->insert([
+            'name' =>'Tag Two',
+            'slug' => Str::slug('Tag Two')
+        ]);
+        DB::table('tags')->insert([
+            'name' =>'Tag Three',
+            'slug' => Str::slug('Tag Three')
         ]);
         DB::table('menues')->insert([
             'title' =>'HOME',
@@ -73,6 +86,15 @@ class DatabaseSeeder extends Seeder
             'slug' => Str::slug('CONTACT US'),
             'link' =>'#',
             'status' => 1
+        ]);
+        DB::table('projects')->insert([
+            'title' =>'CONTACT US',
+            'slug' => Str::slug('CONTACT US'),
+            'body' =>'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis amet corporis omnis ex fuga pariatur similique. Corporis quaerat repudiandae, nobis blanditiis veritatis, voluptatibus eveniet excepturi minima at eos non quae.',
+            'when' => '2021/02/02',
+            'link' => '#',
+            'client_id' => 1,
+            'user_id' => 1
         ]);
     }
 }

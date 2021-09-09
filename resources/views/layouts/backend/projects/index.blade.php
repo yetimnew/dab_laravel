@@ -26,14 +26,13 @@
         </div>
 
         <div class="card-body">
-            <div class="table-responsive text-nowrap">
-                <table class="table-sm table table-bordered table-sm table-striped" id="projects">
+            <div class="table-responsive ">
+                <table class="table table-bordered  table-striped" id="projects">
                     <thead>
                         <tr>
                             <th class="m-1 b-1" width="3%">No</th>
                             <th class="m-1 b-1">Avatar</th>
                             <th class="m-1 b-1">Title</th>
-                            <th class="m-1 b-1">Slug</th>
                             <th class="m-1 b-1">Link</th>
                             <th class="m-1 b-1">status</th>
                             <th class="m-1 b-1" width="3%">Edit</th>
@@ -47,9 +46,15 @@
                             <td class='p-1'><img src="/images/thumbnail/{{ $project->image }}" alt=""
                                     class="rounded-circle" width="40" height="40"></td>
                             <td class='p-1'>{{$project->title}}</td>
-                            <td class='p-1'>{{$project->slug}}</td>
                             <td class='p-1'>{{$project->link}}</td>
-                            <td class='p-1'>{{$project->status}}</td>
+                            <td class='p-1'>
+                                @if ($project->status)
+                                <span class="badge badge-primary">Published</span>
+                                @else
+                                <span class="badge badge-danger">Not Published</span>
+
+                                @endif
+                            </td>
                             <td class='p-1 text-center' data-toggle="tooltip" data-placement="top" title="Edit">
                                 <a href="{{route('project.edit', $project)}}"><i class="fas fa-edit"></i></a>
                             </td>

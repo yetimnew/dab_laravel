@@ -16,13 +16,16 @@ protected $fillable = [
            'when',
            'status',
            'link',
-           'category_id',
            'client_id',
            'user_id',
-           'tag_id',
 ];
-public function category()
+public function categories()
     {
-        return $this->belongsTo(Category::class);
+        return $this->belongsToMany(Category::class);
     }
+public function tags()
+    {
+        return $this->belongsToMany(Tag::class);
+    }
+
 }

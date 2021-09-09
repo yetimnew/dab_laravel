@@ -23,13 +23,11 @@ class ProjectController extends Controller
 
     public function create()
     {
-        $project = new Project;
         $customers= Customer::all();
         $catagories = Category::all();
 
         $tags = Tag::all();
          return view('layouts.backend.projects.create')
-         ->with('project',$project)
          ->with('customers',$customers)
          ->with('catagories',$catagories)
          ->with('tags',$tags);
@@ -54,9 +52,7 @@ class ProjectController extends Controller
         $project->body = $request->body;
         $project->when = $request->when;
         $project->link = $request->link;
-        $project->category_id = $request->category_id;
         $project->client_id = $request->client_id;
-        $project->tag_id = $request->tag_id;
         $project->user_id =auth()->user()->id;
         $project->status = 0;
         if ($request->hasFile('image')) {
@@ -70,6 +66,8 @@ class ProjectController extends Controller
             $project->image =  $filename;
         }
         $project->save();
+        $project->categories()->attach($request->category_id);
+        $project->tags()->attach($request->tag_id);
 
         // Session::flash('success', 'Menu registered successfully');
         SweetAlert::message('Menu registered successfully');
@@ -103,9 +101,7 @@ class ProjectController extends Controller
             'body'=>'required',
             'when'=>'required|date',
             'link'=>'required',
-            'category_id'=>'required',
             'client_id'=>'required',
-            'tag_id'=>'required',
             'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:4096'
     ]);
     $project = Project::findOrFail($id);
@@ -114,12 +110,14 @@ class ProjectController extends Controller
         $project->body = $request->body;
         $project->when = $request->when;
         $project->link = $request->link;
-        $project->category_id = $request->category_id;
         $project->client_id = $request->client_id;
-        $project->tag_id = $request->tag_id;
         $project->user_id =auth()->user()->id;
         $project->status = $request->status;
         $project->save();
+
+        $project->categories()->sync($request->category_id);
+        $project->tags()->sync($request->tag_id);
+
         SweetAlert::message('Menu registered successfully');
         return redirect()->route('project.index');
     }

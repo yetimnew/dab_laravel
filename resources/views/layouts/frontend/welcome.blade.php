@@ -19,7 +19,10 @@
 
                             <!-- Content -->
                             <h2 data-aos="zoom-in" data-aos-delay="2000" class="title effect-static-text">
-                                {{$project->category->title}}</h2>
+                                @foreach ($project->categories as $cat)
+                                {{$cat->title}}
+                                @endforeach
+                            </h2>
                             <p data-aos="zoom-in" data-aos-delay="2400" class="description">{{$project->title}}</p>
 
                             <!-- Action -->

@@ -20,9 +20,7 @@ class CreateProjectsTable extends Migration
             $table->text('body');
             $table->date('when');
             $table->text('link');
-            $table->foreignId('category_id');
             $table->foreignId('client_id');
-            $table->foreignId('tag_id');
             $table->foreignId('user_id');
             $table->tinyInteger('status')->default(0);
             $table->text('image')->default(0);
